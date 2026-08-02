@@ -39,7 +39,7 @@ export function MagneticButton({
       style={
         variant === "primary"
           ? { background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }
-          : undefined
+          : {}
       }
     >
       {children}
