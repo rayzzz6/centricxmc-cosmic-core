@@ -17,7 +17,7 @@ export function Hero() {
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
-      <div className="absolute inset-0 bg-background/45" />
+      <div className="absolute inset-0 bg-background/30" />
       <Particles />
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-5xl flex-col items-center justify-center px-4 pt-28 pb-16 text-center sm:px-6">
