@@ -14,7 +14,7 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "CentricXMC — Eco-Anarchy Minecraft Server | Java & Bedrock" },
       { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: "CentricXMC — Survive. Build. Raid. Dominate." },
+      { property: "og:title", content: "CentricXMC — Eco-Anarchy Minecraft Server | Java & Bedrock" },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
