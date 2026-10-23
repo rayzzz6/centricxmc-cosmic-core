@@ -43,11 +43,11 @@ const BANNED = [
 const FAQS = [
   {
     q: "How do I join CentricXMC?",
-    a: `Add the server with IP ${SERVER.ip} and port ${SERVER.port}. Both Java and Bedrock players use the same address.`,
+    a: `Add the server with IP ${SERVER.ip} and port ${SERVER.javaPort} for Java Edition, or ${SERVER.ip}:${SERVER.bedrockPort} for Bedrock. Both editions are fully supported.`,
   },
   {
     q: "Can Bedrock players join?",
-    a: `Yes. Bedrock players connect to ${SERVER.ip} on port ${SERVER.port} — crossplay is fully supported.`,
+    a: `Yes. Bedrock players connect to ${SERVER.ip} on port ${SERVER.bedrockPort} — crossplay is fully supported.`,
   },
   {
     q: "Is griefing and raiding allowed?",
