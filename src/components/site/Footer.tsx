@@ -43,7 +43,7 @@ export function Footer() {
         </div>
 
         <div className="grid gap-3">
-          <CopyField label="Java IP" value={SERVER.ip} port={SERVER.port} />
+          <CopyField label="Java IP" value={SERVER.ip} port={SERVER.javaPort} />
           <a
             href={SERVER.discord}
             target="_blank"

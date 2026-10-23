@@ -1,9 +1,10 @@
 export const SERVER = {
   name: "CentricXMC",
-  ip: "centricxmc.ice.lol",
-  port: "25604",
+  ip: "centricxmc.gta.how",
+  javaPort: "25565",
+  bedrockPort: "25652",
   discord: "https://discord.gg/6Z29EpVnK",
-  statusApi: "https://api.mcsrvstat.us/3/centricxmc.ice.lol:25604",
+  statusApi: "https://api.mcsrvstat.us/3/centricxmc.gta.how",
 };
 
 export const NAV_LINKS = [
