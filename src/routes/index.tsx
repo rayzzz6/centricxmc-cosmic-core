@@ -4,10 +4,10 @@ import { Hero } from "@/components/site/Hero";
 import { ServerStatus } from "@/components/site/ServerStatus";
 import { Features, Rules, VoteAndStore, DiscordSection, Faq } from "@/components/site/Sections";
 import { Footer } from "@/components/site/Footer";
-import { CursorGlow, LoadingScreen } from "@/components/site/Atmosphere";
+import { AmbientBackground, CursorGlow, LoadingScreen } from "@/components/site/Atmosphere";
 
 const DESCRIPTION =
-  "CentricXMC is a premium Eco-Anarchy Minecraft server. Java & Bedrock at centricxmc.ice.lol:25604 — survival, economy, raiding, crates and live server status.";
+  "CentricXMC is a premium Eco-Anarchy Minecraft server. Java & Bedrock at centricxmc.gta.how — survival, economy, raiding, crates and live server status.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,6 +26,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="relative overflow-x-hidden">
+      <AmbientBackground />
       <LoadingScreen />
       <CursorGlow />
       <Nav />

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import heroWorld from "@/assets/hero-world.jpg";
 import { CopyField } from "./CopyField";
 import { MagneticButton } from "./MagneticButton";
-import { Particles } from "./Atmosphere";
+import { AuroraLayer, Particles, StarField } from "./Atmosphere";
 import { SERVER } from "./site-data";
 
 export function Hero() {
@@ -14,10 +14,12 @@ export function Hero() {
         width={1920}
         height={1088}
         fetchPriority="high"
-        className="absolute inset-0 h-full w-full object-cover"
+        className="animate-ken-burns absolute inset-0 h-full w-full object-cover will-change-transform"
       />
+      <AuroraLayer />
       <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
       <div className="absolute inset-0 bg-background/30" />
+      <StarField />
       <Particles />
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-5xl flex-col items-center justify-center px-4 pt-28 pb-16 text-center sm:px-6">
@@ -70,8 +72,8 @@ export function Hero() {
           transition={{ delay: 2, duration: 0.8 }}
           className="mt-10 flex w-full flex-col items-center gap-3 sm:flex-row sm:justify-center"
         >
-          <CopyField label="Java IP" value={SERVER.ip} port={SERVER.port} />
-          <CopyField label="Bedrock IP" value={SERVER.ip} port={SERVER.port} />
+          <CopyField label="Java IP" value={SERVER.ip} port={SERVER.javaPort} />
+          <CopyField label="Bedrock IP" value={SERVER.ip} port={SERVER.bedrockPort} />
         </motion.div>
       </div>
     </section>

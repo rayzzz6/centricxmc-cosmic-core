@@ -28,6 +28,54 @@ export function Particles() {
   );
 }
 
+const STARS = Array.from({ length: 44 }, (_, i) => ({
+  id: i,
+  left: (i * 53 + 7) % 100,
+  top: (i * 31 + 5) % 70,
+  size: 1 + (i % 3),
+  delay: (i % 9) * 0.6,
+  duration: 2.4 + (i % 5) * 0.8,
+}));
+
+export function StarField() {
+  return (
+    <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+      {STARS.map((s) => (
+        <span
+          key={s.id}
+          className="absolute rounded-full bg-white"
+          style={{
+            left: `${s.left}%`,
+            top: `${s.top}%`,
+            width: s.size,
+            height: s.size,
+            animation: `twinkle ${s.duration}s ease-in-out ${s.delay}s infinite`,
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
+export function AuroraLayer() {
+  return (
+    <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+      <div className="aurora aurora-a" />
+      <div className="aurora aurora-b" />
+      <div className="aurora aurora-c" />
+    </div>
+  );
+}
+
+export function AmbientBackground() {
+  return (
+    <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+      <div className="ambient ambient-a" />
+      <div className="ambient ambient-b" />
+    </div>
+  );
+}
+
 export function CursorGlow() {
   const [pos, setPos] = useState({ x: -400, y: -400 });
 

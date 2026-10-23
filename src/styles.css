@@ -224,6 +224,92 @@
   animation: pulse-ring 2s ease-out infinite;
 }
 
+@utility animate-ken-burns {
+  animation: ken-burns 36s ease-in-out infinite alternate;
+}
+
+@keyframes ken-burns {
+  0% { transform: scale(1.06) translate3d(0, 0, 0); }
+  100% { transform: scale(1.2) translate3d(-1.5%, -2%, 0); }
+}
+
+@keyframes aurora-sway {
+  0%, 100% { transform: translate3d(-6%, 0, 0) rotate(-10deg) scale(1); }
+  50% { transform: translate3d(7%, 3%, 0) rotate(8deg) scale(1.12); }
+}
+
+@keyframes ambient-drift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(5%, -7%, 0) scale(1.18); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; transform: scale(0.9); }
+  50% { opacity: 0.9; transform: scale(1.25); }
+}
+
+.aurora {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+
+.aurora-a {
+  top: -12%;
+  left: -18%;
+  width: 65vmax;
+  height: 34vmax;
+  background: radial-gradient(ellipse at center, oklch(0.55 0.28 300 / 0.55), transparent 65%);
+  animation: aurora-sway 18s ease-in-out infinite;
+}
+
+.aurora-b {
+  top: 18%;
+  right: -22%;
+  width: 60vmax;
+  height: 30vmax;
+  background: radial-gradient(ellipse at center, oklch(0.62 0.3 330 / 0.45), transparent 65%);
+  animation: aurora-sway 24s ease-in-out infinite reverse;
+}
+
+.aurora-c {
+  bottom: -18%;
+  left: 12%;
+  width: 70vmax;
+  height: 32vmax;
+  background: radial-gradient(ellipse at center, oklch(0.68 0.2 265 / 0.4), transparent 65%);
+  animation: aurora-sway 30s ease-in-out infinite;
+  animation-delay: -8s;
+}
+
+.ambient {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(110px);
+  opacity: 0.35;
+  will-change: transform;
+}
+
+.ambient-a {
+  top: -10%;
+  left: -15%;
+  width: 55vmax;
+  height: 45vmax;
+  background: radial-gradient(ellipse at center, oklch(0.5 0.24 295 / 0.5), transparent 65%);
+  animation: ambient-drift 26s ease-in-out infinite;
+}
+
+.ambient-b {
+  bottom: -15%;
+  right: -18%;
+  width: 50vmax;
+  height: 40vmax;
+  background: radial-gradient(ellipse at center, oklch(0.55 0.26 330 / 0.4), transparent 65%);
+  animation: ambient-drift 32s ease-in-out infinite reverse;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.001ms !important;
